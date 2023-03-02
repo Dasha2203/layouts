@@ -478,6 +478,10 @@ body {
         visibility: visible;
     }
 
+    .menu__navigation {
+        display: flex;
+    }
+
     .header .profile-block {
         margin-left: auto;
         margin-right: 30px;
