@@ -15,6 +15,10 @@ body {
     max-width: 1442px;
 }
 
+#sprites {
+    display: none;
+}
+
 .section {
     padding: 60px 0;
 }
@@ -617,7 +621,7 @@ body {
 }
 
 .about__content {
-    padding-top: 86px;
+    padding: 86px 0 166px;
     width: calc(50% - 16px);
 }
 
@@ -629,7 +633,7 @@ body {
     border-radius: 24px;
     overflow: hidden;
     width: calc(50% - 16px);
-    aspect-ratio: 1 / 1;
+    /*aspect-ratio: 1 / 1;*/
 }
 
 .about__img img {
@@ -646,6 +650,135 @@ body {
     color: #5B5B5B;
 }
 
+.footer {
+    padding: 120px 0;
+    background-color: #F9F9F9;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__about {
+    width: 100%;
+    max-width: 354px;
+}
+
+.footer__text {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #5B5B5B;
+}
+
+.footer__social {
+    margin-top: 32px;
+    display: flex;
+    gap: 32px;
+}
+
+.footer__social-link {
+    transition: all .4s;
+}
+
+.footer__social-link svg {
+    fill: #5243C2;
+}
+
+.footer__social-link:hover {
+    transform: scale(1.1);
+}
+
+.footer__navigation {
+    display: flex;
+    /*width: 100%;*/
+    gap: 64px;
+    /*justify-content: space-between;*/
+    /*width: 100%;*/
+    /*max-width: 505px;*/
+}
+
+.footer__block-navigation {
+    width: 100%;
+    min-width: 125px;
+    max-width: 125px;
+}
+
+.footer__navigation-name {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #161414;
+}
+
+.footer__navigation-link {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #5B5B5B;
+}
+
+.footer__navigation-list .footer__navigation-item:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.footer__form {
+    max-width: 388px;
+}
+
+.footer__form-title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #161414;
+}
+
+.form__input {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+.form__input label {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #5B5B5B;
+}
+
+.form__input input {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #161414;
+}
+
+.form__input-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.row .button svg {
+    transition: transform .4s;
+}
+
+.row .button:hover svg {
+    transform: scale(1.2);
+}
+
+.footer__form .row {
+    display: flex;
+    gap: 16px;
+}
+
+
+
 @media screen and (max-width: 1441px) {
     .container {
         max-width: 1207px;
@@ -653,6 +786,16 @@ body {
 
     .card-rating {
         max-width: calc(33.33% - 21.5px);
+    }
+
+    .footer__container {
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .footer__about {
+        order: 3;
+        width: 100%;
     }
 }
 
@@ -674,6 +817,8 @@ body {
     .tips__list .description-card {
         max-width: 100%;
     }
+
+
 }
 
 @media screen and (max-width: 971px) {
@@ -761,7 +906,7 @@ body {
     }
 
     .about__content {
-        padding-top: 0;
+        padding: 0;
         width: 100%;
     }
 
@@ -770,6 +915,32 @@ body {
         width: 50%;
         justify-content: center;
         margin: 30px auto 0
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+
+    .footer__about {
+        order: 3;
+    }
+
+    .footer__navigation {
+        order: 2;
+        align-self: center;
+    }
+
+    .footer__form {
+        order: 1;
+    }
+
+    .form__input {
+        flex: 1;
     }
 }
 
@@ -844,6 +1015,12 @@ body {
     .about__text {
         font-size: 14px;
     }
+
+    .footer__navigation {
+        align-self: unset;
+        gap: unset;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 501px) {
@@ -873,6 +1050,17 @@ body {
     .small-card__text {
         font-size: 12px;
         line-height: 14px;
+    }
+
+    .footer__navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer__block-navigation {
+        max-width: none;
+        text-align: center;
     }
 }
 
