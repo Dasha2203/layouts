@@ -131,6 +131,7 @@ body {
     overflow: hidden;
     max-width: 50%;
 }
+
 .card-rating__text svg {
     fill: #979797;
     width: 12px;
@@ -145,6 +146,65 @@ body {
 
 .card-rating__stars .start-icon--active {
     fill: #FFA800;
+}
+
+.description-card {
+    display: flex;
+    gap: 32px;
+}
+
+.description-card__img {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.description-card__img img {
+    width: 100%;
+}
+
+.description-card__data {
+    display: flex;
+    flex-direction: column;
+}
+
+.description-card__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #161414;
+}
+
+.description-card__text {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #5B5B5B;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description-card__footer {
+    margin-top: auto;
+    padding-top: 20px;
+    display: flex;
+    gap: 24px;
+}
+
+.description-card__params {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #878787;
 }
 
 .button {
@@ -525,8 +585,28 @@ body {
     gap: 32px;
 }
 
-.apartments__container .link-as-btn {
+
+.tips__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.tips__list .description-card {
+    width: 100%;
+    max-width: calc(50% - 16px);
+}
+
+.apartments__container .link-as-btn,
+.activities__container .link-as-btn,
+.tips__container .link-as-btn {
     display: none;
+}
+
+.activities__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 
 @media screen and (max-width: 1441px) {
@@ -552,6 +632,10 @@ body {
         margin-top: 9vh;
         font-size: 42px;
         line-height: 1.1;
+    }
+
+    .tips__list .description-card {
+        max-width: 100%;
     }
 }
 
@@ -647,7 +731,9 @@ body {
         display: none;
     }
 
-    .apartments__container > .link-as-btn {
+    .apartments__container > .link-as-btn,
+    .activities__container > .link-as-btn,
+    .tips__container > .link-as-btn{
         display: flex;
         width: 50%;
         justify-content: center;
@@ -677,6 +763,15 @@ body {
         max-width: 100%;
         width: 100%;
         flex: auto;
+    }
+
+    .tips__list .description-card {
+        flex-direction: column;
+    }
+
+
+    .description-card__img {
+        flex-basis: auto;
     }
 }
 
