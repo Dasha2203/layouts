@@ -51,6 +51,10 @@ body {
     border-radius: 12px;
 }
 
+.link-as-btn svg {
+    fill: #5243C2;
+}
+
 
 .small-card {
     width: 100%;
@@ -211,6 +215,10 @@ body {
     color: #878787;
 }
 
+.description-card__params svg{
+    fill: #878787;
+}
+
 .button {
     padding: 24px;
     display: inline-flex;
@@ -226,6 +234,7 @@ body {
 
 .button svg {
     transition: transform .4s;
+    fill: #FFFFFF;
 }
 
 .form {
@@ -266,11 +275,10 @@ body {
     font-size: 14px;
     line-height: 16px;
     color: #5B5B5B;
-
 }
 
-.select__block--selected {
-    /*background-color: red;*/
+.select__icon svg {
+    fill: #FFA800;
 }
 
 /* style the items (options), including the selected item: */
@@ -633,7 +641,6 @@ body {
     border-radius: 24px;
     overflow: hidden;
     width: calc(50% - 16px);
-    /*aspect-ratio: 1 / 1;*/
 }
 
 .about__img img {
@@ -693,11 +700,7 @@ body {
 
 .footer__navigation {
     display: flex;
-    /*width: 100%;*/
     gap: 64px;
-    /*justify-content: space-between;*/
-    /*width: 100%;*/
-    /*max-width: 505px;*/
 }
 
 .footer__block-navigation {
@@ -741,8 +744,13 @@ body {
     padding: 16px;
     display: flex;
     align-items: center;
+    gap: 16px;
     background-color: #FFFFFF;
     border-radius: 12px;
+}
+
+.form__input svg {
+    fill: #FFA800;
 }
 
 .form__input label {
@@ -1017,9 +1025,10 @@ body {
     }
 
     .footer__navigation {
-        align-self: unset;
-        gap: unset;
+        align-self: normal;
+        gap: normal;
         justify-content: space-between;
+        width: 100%;
     }
 }
 
@@ -1029,7 +1038,10 @@ body {
         line-height: 32px;
     }
 
-    .apartments__container > .link-as-btn {
+    .apartments__container > .link-as-btn,
+    .about__content > .link-as-btn,
+    .activities__container .link-as-btn,
+    .tips__container .link-as-btn {
         width: 80%;
     }
 
@@ -1062,6 +1074,33 @@ body {
         max-width: none;
         text-align: center;
     }
+
+    .footer__form .row {
+        gap: 5px;
+    }
+
+    .footer__form .button{
+        padding: 10px 10px;
+    }
+
+    .form__input {
+        padding: 10px;
+        gap: 7px;
+    }
+
+    .form__input label {
+        font-size: 12px;
+    }
+
+    .form__input input {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .form__input svg {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -1082,7 +1121,10 @@ body {
         display: flex;
     }
 
-    .apartments__container > .link-as-btn {
+    .apartments__container > .link-as-btn,
+    .about__content > .link-as-btn,
+    .activities__container .link-as-btn,
+    .tips__container .link-as-btn{
         width: 100%;
     }
 
