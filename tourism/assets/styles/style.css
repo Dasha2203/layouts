@@ -532,7 +532,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: #000000;
-    background-image: url("../img/earth.jpg");
+    background-image: url("../img/earth.jpeg");
     background-repeat: no-repeat;
     background-position: bottom center;
     border-radius: 0 0 54px 54px;
